@@ -1,0 +1,40 @@
+.next-day {
+  width: calc(100% / 3 - 15px);
+  min-height: 400px;
+  background-color: rgba(255, 255, 255, 0.354); /* #64bfff */
+  border-radius: 20px;
+  padding: 15px;
+
+  color: rgb(10, 54, 114);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+
+  @media (width < 1200px) {
+    width: calc(100% / 2 - 15px);
+  }
+
+  @media (width < 820px) {
+    width: calc(100%);
+  }
+}
+
+.icon-container {
+  width: 100px;
+  height: 100px;
+}
+
+.next-day-date {
+  font-size: 21px;
+}
+
+.image-description.card {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.info-next-day {
+  width: 100%;
+}

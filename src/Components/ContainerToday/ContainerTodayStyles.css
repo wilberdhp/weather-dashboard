@@ -1,0 +1,130 @@
+.container-today {
+  height: 0px;
+  max-width: 0px;
+  
+  background-color: rgb(16, 115, 255);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.594);
+  border-radius: 20px;
+
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease-in-out, visible .3s ease-in-out;
+}
+
+.container-today.active {
+  height: fit-content;
+  width: 100%;
+  max-width: 1300px;
+  opacity: 1;
+  visibility: visible;
+  padding: 10px;
+  padding-bottom: 30px;
+  gap: 30px;
+}
+
+.container-today .principal-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 0px;
+  height: 0px;
+}
+
+.container-today.active .principal-info {
+  width: fit-content;
+  height: fit-content;
+}
+
+.principal-info .img-container {
+  width: 200px;
+  height: 200px;
+}
+
+.container-today .principal-info h2 {
+  font-size: 170px;
+  display: flex;
+  justify-content: flex-start;
+  line-height: 100%;
+
+  @media (width < 460px) {
+    font-size: 150px;
+  }
+}
+
+.container-today .principal-info h2 span {
+  font-size: 50px;
+  line-height: 100px;
+
+  @media (width < 460px) {
+    font-size: 45px;
+  }
+}
+
+.name-country {
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+
+  @media (width < 460px) {
+    font-size: 45px;
+  }
+}
+
+.name-country .bi-geo-alt-fill {
+  margin-right: 15px;
+}
+
+.container-today.active .container-info {
+  width: 500px;
+  height: fit-content;
+}
+
+.container-info {
+  width: 0px;
+  height: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.container-info button {
+  width: fit-content;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 25px;
+  cursor: pointer;
+  background-color: rgb(10, 54, 114);
+  transition: all .3s ease;
+  font-weight: bold;
+}
+
+.container-info button:hover {
+  color: rgb(16, 115, 255);
+  background-color: white;
+}
+
+.info {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.292);
+  height: fit-content;
+  max-height: 400px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.image-description {
+  font-size: 20px;
+}
+

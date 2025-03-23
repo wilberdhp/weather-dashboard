@@ -1,0 +1,22 @@
+.item {
+  font-size: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.329);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item.card {
+  border-bottom: 1px solid rgb(10, 54, 114);
+}
+
+.info .item .item-name {
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.792);
+  
+}
+
+.item .item-value {
+  font-weight: bold;
+}

@@ -1,0 +1,161 @@
+.container {
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.image-description {
+  margin-bottom: 10px;
+}
+
+.image-description::first-letter {
+  text-transform: uppercase;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.icon-front {
+  position: absolute;
+  top: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-front.container-active {
+  display: none;
+}
+
+.sun {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgb(255, 230, 0);
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+  box-shadow: -20px -20px 100px 40px rgba(255, 251, 0, 0.4);
+
+  @media (width <= 700px) {
+    width: 125px;
+    height: 125px;
+  }
+
+  @media (width < 460px) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+.bi-cloud-fill {
+  line-height: 200px;
+  font-size: 300px;
+  color: rgba(255, 255, 255, 0.865);
+  filter: blur(2px);
+  -webkit-filter: blur(px);
+
+  @media (width <= 700px) {
+    font-size: 250px;
+  }
+
+  @media (width < 460px) {
+    font-size: 200px;
+  }
+ 
+}
+
+.loading {
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: -20px;
+  border-radius: 50%;
+  animation-name: animation-rueda;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+
+  /* cubic-bezier(0.86, 0, 0.07, 1) */
+  /* cubic-bezier(0.77, 0, 0.175, 1) */
+  /* cubic-bezier(0.445, 0.05, 0.55, 0.95) */
+  /* cubic-bezier(0.215, 0.610, 0.355, 1) */
+  /* cubic-bezier(0.175, 0.885, 0.32, 1.275) */
+
+  @media (width < 460px) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.loading span {
+  display: block;
+  position: absolute;
+  margin: 2px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  z-index: 99;
+  background-color: rgb(10, 54, 114);
+
+  @media (width < 460px) {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.loading span:first-of-type {
+  top: 0;
+  left: 0;
+}
+
+.loading span:nth-of-type(2) {
+  top: 0;
+  right: 0;
+}
+
+.loading span:nth-of-type(3) {
+  bottom: 0;
+  right: 0;
+}
+
+.loading span:last-of-type {
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes animation-rueda {
+  to {
+    transform: rotate(0deg);
+
+  }
+
+  50% {
+    width: 40px;
+    height: 40px;
+  }
+
+  from {
+    transform: rotate(360deg);
+
+  }
+}
+
