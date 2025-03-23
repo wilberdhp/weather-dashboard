@@ -4,7 +4,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 export const getCityData = async (city) => {
 
   try {
-    const res = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`);
+    const res = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`);
     const data = await res.json();  
 
     const [ { lat, lon, name, country } ] = data;
