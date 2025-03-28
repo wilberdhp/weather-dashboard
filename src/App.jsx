@@ -28,32 +28,11 @@ function App() {
 
   useEffect(() => {
     const weatherDataSaved = window.localStorage.getItem("weather-data");
-
     if (weatherDataSaved === null) return;
-
-
-    const {
-      city,
-      feels_like,
-      humidity,
-      pressure,
-      temp,
-      wind_speed,
-      icon,
-      description,
-      weatherNextDays
-    } = JSON.parse(weatherDataSaved);
-
-    setCity(city)
-    setFeelsLike(feels_like)
-    setCityHumidity(humidity)
-    setCityPressure(pressure)
-    setCityTemp(temp)
-    setWindSpeed(wind_speed)
-    setWeatherIcon(icon)
-    setImageDescription(description)
-    setNextDays(weatherNextDays)
-
+    
+    const { cityName, country, lat, lon } = JSON.parse(weatherDataSaved);
+    addWeatherData(lat, lon, cityName, country)
+    
   }, [])
 
 
@@ -78,15 +57,10 @@ function App() {
     setNextDays(weatherNextDays);
 
     const saveLocalStorage = {
-      city: `${cityName}, ${country}`,
-      feels_like,
-      humidity,
-      pressure,
-      temp,
-      wind_speed,
-      icon,
-      description,
-      weatherNextDays
+      cityName, 
+      country,
+      lat,
+      lon
     }
     
     window.localStorage.setItem("weather-data", JSON.stringify(saveLocalStorage))
